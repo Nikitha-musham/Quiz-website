@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Quiz..!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"> 
+    <link rel="icon"  href="https://cdn-icons-png.flaticon.com/512/5691/5691719.png" type="image/png">
+
+</head>
+<body>
+    <div class="quiz-container" id="welcomeScreen">
+        <div class="welcome">
+            <h2>Welcome to the Quiz!</h2>
+            <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" autofocus>
+            <button class="btn btn-primary mt-3" onclick="startQuiz()">Start Quiz</button>
+        </div>
+    </div>
+    <div class="quiz-container" id="quiz" style="display: none;">
+        <div class="timer" id="timer">Time left: 10:00</div>
+        <div class="question" id="question">Question will appear here</div>
+        <div class="question-count" id="questionCount"> </div>
+        <div class="options" id="options"></div>
+        <div class="navigation mt-3">
+            <button class="btn btn-secondary" id="prevButton" style="display: none;" onclick="prevQuestion()">Previous</button>
+            <button class="btn btn-primary float-end" id="nextButton" onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+    <div class="result" id="result">
+        <h3 id="scoreText"></h3>
+        <button class="btn btn-success" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>

@@ -163,28 +163,30 @@ const questions = [
             }
         }
 
-        function checkAnswer(selectedOption, buttonElement) {
+function checkAnswer(selectedOption, buttonElement) {
             const correctAnswer = questions[currentQuestionIndex].answer;
             const optionsEl = document.getElementById('options');
             const buttons = optionsEl.querySelectorAll('button');
-        
+          
+            // Check if the selected option is correct
             if (selectedOption === correctAnswer) {
-                score++;
-                buttonElement.classList.add('btn-correct');
+              score++;
+              buttonElement.classList.add('btn-correct');
             } else {
-                buttonElement.classList.add('btn-wrong');
-                // Highlight the correct answer
-                buttons.forEach(btn => {
-                    if (btn.textContent === correctAnswer) {
-                        btn.classList.add('btn-correct');
-                    }
-                });
+              buttonElement.classList.add('btn-wrong');
+              // Highlight the correct answer in green
+              buttons.forEach(btn => {
+                if (btn.textContent === correctAnswer) {
+                  btn.classList.add('btn-correct');
+                }
+              });
             }
-        
+          
             // Disable all buttons after an answer is selected
-            //buttons.forEach(btn => btn.classList.add('disabled'));
-        }
-
+            // buttons.forEach(btn => {
+            //   btn.disabled = true;
+            // });
+          }
         function showResult() {
             const quizEl = document.getElementById('quiz');
             const resultEl = document.getElementById('result');

@@ -57,11 +57,13 @@ body {
 .btn-correct {
   background-color: green;
   color: white;
+  pointer-events: none;
 }
 
 .btn-wrong {
   background-color: red;
   color: white;
+  pointer-events: none;
 }
 
 
